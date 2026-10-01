@@ -1,0 +1,9 @@
+# Obsidian 工作区状态（界面布局，每台机器不同，不该同步冲突）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# 系统文件
+Thumbs.db
+desktop.ini
