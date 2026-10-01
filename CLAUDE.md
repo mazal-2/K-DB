@@ -21,18 +21,18 @@
 
 ## 项目用途
 
-本仓库（`D:\Obsidian_KB`）用来管理知识系统，框架基于 Obsidian，采用 PARA 衍生的五目录结构：
+本仓库就是 Obsidian Vault（`C:\Users\mazal\Documents\Obsidian Vault\`），通过 git 同步到 GitHub（`https://github.com/mazal-2/K-DB.git`）实现在线管理。
 
 | 目录 | 用途 | 流转规则 |
 |------|------|----------|
-| inbox 收件箱 | 未整理的灵感、笔记、摘录、任务 | 只进不出会堆积；定期（建议每周）分拣到下游 |
-| project 项目 | 有明确目标和截止日期的主动工作（如秋招准备、作品集、实习投递） | 完成后归档或提炼进 knowledge |
-| knowledge 知识 | 加工整理后的产品方法论、案例、模板、面试题 | 稳定沉淀区，持续更新 |
-| wisdom 智慧 | 提炼后的洞察、原则、个人思考与决策框架 | 从 knowledge 中反复消化后升华而来，量少质高 |
-| archive 归档 | 完成的项目、过时材料 | 只读保存，可随时翻找 |
+| 00-inbox 收件箱 | 未整理的灵感、笔记、摘录、任务 | 只进不出会堆积；定期（建议每周）分拣到下游 |
+| 10-projects 项目 | 有明确目标和截止日期的主动工作（如秋招准备、作品集、实习投递） | 完成后归档或提炼进 knowledge |
+| 20-personal_reflection 个人反思 | 复盘、情绪、自我认知与经历梳理 | 持续书写；秋招叙事素材的原始来源 |
+| 40-knowledge 知识 | 加工整理后的产品方法论、案例、模板、面试题 | 稳定沉淀区，持续更新 |
+| 30-archive 归档 | 完成的项目、过时材料 | 只读保存，可随时翻找 |
+| 附件 | 图片、PDF 等非 markdown 文件 | 由笔记引用，随笔记归位 |
 
-Obsidian Vault 的实际位置：`C:\Users\mazal\Documents\Obsidian Vault\`
-（现有子目录：00-收件箱、10-项目、20-知识、30-归档、附件）
+> wisdom（智慧）层暂未单设目录：从 knowledge 中反复消化出的原则与洞察，可先沉淀在 20-personal_reflection 或 00-INDEX.md 的索引体系中，目录规模大了再拆。
 
 ## 协作约定
 
