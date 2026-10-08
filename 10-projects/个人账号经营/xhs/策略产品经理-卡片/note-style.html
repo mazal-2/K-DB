@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>策略产品经理入门 · 笔记风卡片</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e8e6e1; font-family: "PingFang SC", "Microsoft YaHei UI", "Noto Sans SC", sans-serif; }
+  .poster {
+    width: 1080px; height: 1440px;
+    background: #fffdf8;
+    padding: 76px 84px 60px;
+    display: flex; flex-direction: column;
+    color: #2b2b2b;
+    position: relative;
+    overflow: hidden;
+  }
+  .poster + .poster { margin-top: 48px; }
+
+  /* 顶部小标签 */
+  .tag-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+  .tag {
+    display: inline-block; background: #2f5cff; color: #fff;
+    font-size: 24px; font-weight: 600; padding: 8px 20px; border-radius: 8px; letter-spacing: 1px;
+  }
+  .pageno { font-size: 22px; color: #b9b4a8; font-weight: 500; }
+
+  h1 { font-size: 72px; line-height: 1.3; font-weight: 800; margin-bottom: 20px; }
+  h2 { font-size: 54px; line-height: 1.35; font-weight: 800; margin-bottom: 28px; }
+  h1 .u, h2 .u { background: linear-gradient(transparent 62%, #ffe45c 62%); }
+  .sub { font-size: 30px; color: #6f6a5e; line-height: 1.65; margin-bottom: 40px; }
+
+  p.body, li { font-size: 31px; line-height: 1.75; }
+  .body + .body { margin-top: 20px; }
+  mark { background: linear-gradient(transparent 55%, #ffe45c 55%); padding: 0 4px; font-weight: 600; }
+  .hl-blue { color: #2f5cff; font-weight: 700; }
+  .hl-org { color: #ff6b2b; font-weight: 700; }
+
+  .card {
+    background: #fff; border: 2px solid #e7e2d6; border-radius: 16px;
+    padding: 30px 34px; margin-top: 28px;
+  }
+  .card.blue { background: #f0f4ff; border-color: #c9d6ff; }
+  .card.yellow { background: #fff9e3; border-color: #f3e3a6; }
+  .card .ct { font-size: 26px; font-weight: 700; color: #2f5cff; margin-bottom: 12px; letter-spacing: 1px; }
+  .card.yellow .ct { color: #b98a00; }
+
+  ul { list-style: none; margin-top: 24px; }
+  li { padding-left: 44px; position: relative; margin-bottom: 20px; }
+  li::before { content: "✦"; position: absolute; left: 4px; color: #2f5cff; font-size: 26px; top: 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 28px; background: #fff; border-radius: 12px; overflow: hidden; }
+  th { background: #2f5cff; color: #fff; font-size: 26px; padding: 16px 18px; text-align: left; font-weight: 600; }
+  td { font-size: 26px; padding: 15px 18px; border-bottom: 1px solid #eee9dc; line-height: 1.5; }
+  tr:last-child td { border-bottom: 0; }
+  td.k { font-weight: 700; color: #2f5cff; white-space: nowrap; }
+
+  .step { display: flex; align-items: flex-start; gap: 22px; margin-top: 30px; }
+  .step .n {
+    flex: 0 0 56px; height: 56px; border-radius: 50%;
+    background: #2f5cff; color: #fff; font-size: 28px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 4px;
+  }
+  .step .t { font-size: 31px; line-height: 1.6; }
+  .step .t b { font-size: 33px; }
+  .arrow { text-align: center; color: #b9b4a8; font-size: 30px; margin: 6px 0; }
+
+  .footer { margin-top: auto; padding-top: 28px; border-top: 2px dashed #e0dbcd; display: flex; justify-content: space-between; font-size: 22px; color: #b9b4a8; }
+  .grow { flex: 1; }
+  .big-quote { font-size: 40px; line-height: 1.65; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- P1 封面 -->
+<section class="poster" id="p1">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.01</span><span class="pageno">PM NOTES</span></div>
+  <div class="grow" style="flex:0 0 60px"></div>
+  <h1>为什么大厂<br>都离不开<br><span class="u">策略产品经理</span>？</h1>
+  <p class="sub">一个.jd 优惠券的例子，8 页讲清楚 👇<br>（好吧是京东优惠券的例子）</p>
+  <div class="card blue">
+    <div class="ct">📌 一句话定义</div>
+    <p class="body">策略，就是让系统在<mark>不同用户、不同场景</mark>下做出<mark>不同决策</mark>。</p>
+  </div>
+  <div class="grow"></div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>01 / 08 · 关注看全系列</span></div>
+</section>
+
+<!-- P2 六要素 -->
+<section class="poster" id="p2">
+  <div class="tag-row"><span class="tag">定义</span><span class="pageno">02 / 08</span></div>
+  <h2>一个策略，<span class="u">六个要素</span></h2>
+  <p class="sub">在业务里，策略 = 针对特定对象、在特定场景下，按规则行动，再用结果持续优化。</p>
+  <table>
+    <tr><th style="width:180px">要素</th><th>以京东优惠券为例</th></tr>
+    <tr><td class="k">🎯 目标</td><td>提高购买转化率，控制优惠成本</td></tr>
+    <tr><td class="k">👤 对象</td><td>新用户 / 高价值用户 / 价格敏感用户</td></tr>
+    <tr><td class="k">⏰ 场景</td><td>加购未结算、大促活动期间</td></tr>
+    <tr><td class="k">🎬 行动</td><td>向用户发放优惠券或权益</td></tr>
+    <tr><td class="k">⚙️ 规则</td><td>按特征决定 <b>给谁发、发什么券、发多少</b></td></tr>
+    <tr><td class="k">📊 评估</td><td>领取率、使用率、转化率、ROI</td></tr>
+  </table>
+  <div class="grow"></div>
+  <div class="card yellow">
+    <p class="body">这套「<mark>如何判断 + 如何行动</mark>」的规则，就是一个策略。</p>
+  </div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>02 / 08</span></div>
+</section>
+
+<!-- P3 对比 -->
+<section class="poster" id="p3">
+  <div class="tag-row"><span class="tag">角色对比</span><span class="pageno">03 / 08</span></div>
+  <h2>两种 PM，两个问题</h2>
+  <div class="card">
+    <div class="ct">功能型产品经理</div>
+    <p class="body">设计「<b>用户怎么用</b>」</p>
+    <p class="body" style="color:#6f6a5e">关注交互、流程、页面：下单路径怎么走、按钮放哪。</p>
+  </div>
+  <div class="card blue">
+    <div class="ct">策略型产品经理</div>
+    <p class="body">设计「<b>系统怎么决策</b>」</p>
+    <p class="body" style="color:#6f6a5e">关注规则、特征、数据：什么用户在什么场景拿到什么券、内容排第几位。</p>
+  </div>
+  <div class="grow"></div>
+  <p class="body">常见策略方向：</p>
+  <ul>
+    <li>搜索策略 · 推荐策略（头条个性化推荐）</li>
+    <li>广告策略 · 风控策略</li>
+    <li>用户增长策略 · 补贴策略（滴滴订单分发）</li>
+  </ul>
+  <div class="card yellow">
+    <p class="body"><mark>大型产品，一定不能缺少策略产品经理。</mark></p>
+  </div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>03 / 08</span></div>
+</section>
+
+<!-- P4 四步日常 -->
+<section class="poster" id="p4">
+  <div class="tag-row"><span class="tag">日常工作</span><span class="pageno">04 / 08</span></div>
+  <h2>策略 PM 的<span class="u">四步日常</span></h2>
+  <div class="step"><div class="n">1</div><div class="t"><b>需求调研</b> 🔍<br>哪些用户没买？为什么？券能不能解决？——访谈 + 业务反馈 + 数据分析</div></div>
+  <div class="arrow">↓</div>
+  <div class="step"><div class="n">2</div><div class="t"><b>产品规划</b> 📝<br>定清楚什么用户、什么场景、发什么券、发多少 → 写成 PRD</div></div>
+  <div class="arrow">↓</div>
+  <div class="step"><div class="n">3</div><div class="t"><b>项目落地</b> 🛠<br>和算法、研发、数据协作：特征计算、发券规则、策略配置后台</div></div>
+  <div class="arrow">↓</div>
+  <div class="step"><div class="n">4</div><div class="t"><b>迭代优化</b> 🔄<br>盯领取率、使用率、转化率、成本；不行就调分层和力度</div></div>
+  <div class="grow"></div>
+  <div class="card yellow">
+    <p class="body">记忆公式：<mark>调研 → 规划 → 落地 → 迭代</mark>，和所有 PM 一样，只是对象从「页面」变成了「规则」。</p>
+  </div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>04 / 08</span></div>
+</section>
+
+<!-- P5 三类特征 -->
+<section class="poster" id="p5">
+  <div class="tag-row"><span class="tag">匹配原料</span><span class="pageno">05 / 08</span></div>
+  <h2>发券之前，先看<span class="u">三类特征</span></h2>
+  <div class="card blue">
+    <div class="ct">👤 用户特征</div>
+    <p class="body">用户类型 · 品类偏好 · 历史购买 · 浏览加购 · <mark>优惠敏感度</mark> · 活跃程度</p>
+    <p class="body" style="color:#6f6a5e">→ 他是谁？对优惠有多敏感？</p>
+  </div>
+  <div class="card blue">
+    <div class="ct">🎫 优惠券特征</div>
+    <p class="body">适用品类 · 优惠类型 · 额度 · 使用门槛 · 有效期 · <mark>发放成本</mark></p>
+    <p class="body" style="color:#6f6a5e">→ 这张券适合谁？成本多少？</p>
+  </div>
+  <div class="card blue">
+    <div class="ct">🌏 环境特征</div>
+    <p class="body">时间 · 地理位置 · 天气 · 设备渠道 · 促销活动</p>
+    <p class="body" style="color:#6f6a5e">→ 他现在处在什么消费场景？</p>
+  </div>
+  <div class="grow"></div>
+  <p class="body">特征是策略的地基：系统先<mark>「认识」用户和券</mark>，才能谈匹配。</p>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>05 / 08</span></div>
+</section>
+
+<!-- P6 闭环 -->
+<section class="poster" id="p6">
+  <div class="tag-row"><span class="tag">决策闭环</span><span class="pageno">06 / 08</span></div>
+  <h2>一套策略的<span class="u">决策闭环</span></h2>
+  <table>
+    <tr><th style="width:220px">步骤</th><th>核心问题</th></tr>
+    <tr><td class="k">① 识别用户</td><td>这个用户是谁？有什么需求？</td></tr>
+    <tr><td class="k">② 判断场景</td><td>现在存在购买机会吗？</td></tr>
+    <tr><td class="k">③ 匹配优惠</td><td>什么券最适合他？</td></tr>
+    <tr><td class="k">④ 策略决策</td><td>给不给？什么时候给？给多少？</td></tr>
+    <tr><td class="k">⑤ 效果评估</td><td>这次策略真的有效吗？</td></tr>
+    <tr><td class="k">⑥ 策略优化</td><td>下一次怎么做得更好？</td></tr>
+  </table>
+  <div class="grow"></div>
+  <div class="card yellow">
+    <div class="ct">💡 增量思维（最容易忽略）</div>
+    <p class="body">不是让「本来就会买的人」拿到优惠，而是找到<mark>「被优惠刺激才会买」的用户</mark>，用合理成本换增量转化。</p>
+  </div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>06 / 08</span></div>
+</section>
+
+<!-- P7 案例 -->
+<section class="poster" id="p7">
+  <div class="tag-row"><span class="tag">实战案例</span><span class="pageno">07 / 08</span></div>
+  <h2>同一个系统，<span class="u">两种决策</span></h2>
+  <div class="card">
+    <div class="ct">👤 用户 A · 美妆加购少女</div>
+    <p class="body">连续浏览美妆商品 🛍 购物车有件 <b>¥120</b> 的商品 · 历史常用优惠券</p>
+    <p class="body">系统判断：<span class="hl-blue">美妆兴趣 + 优惠敏感 + 强购买意愿</span></p>
+    <p class="body">→ 动作：发美妆 <b>「满 100 减 20」</b> 🎫</p>
+  </div>
+  <div class="card">
+    <div class="ct">👤 用户 B · 外卖新用户</div>
+    <p class="body">刚用京东外卖 🧋 下单集中在饮品店 · 消费频次还很低</p>
+    <p class="body">系统判断：<span class="hl-org">新客习惯培养期 + 品类兴趣明确</span></p>
+    <p class="body">→ 动作：<b>饮品品类定向激励</b>，不发通用券</p>
+  </div>
+  <div class="grow"></div>
+  <p class="sub">真实业务还会叠加机器学习打分、预测模型、A/B 实验、用户分层——但底层逻辑不变。</p>
+  <div class="card yellow">
+    <p class="body">面试官问「系统怎么决定给谁发券」，按 <mark>特征 → 场景 → 匹配 → 决策</mark> 四步答。</p>
+  </div>
+  <div class="footer"><span>策略产品经理 · 入门</span><span>07 / 08</span></div>
+</section>
+
+<!-- P8 总结 -->
+<section class="poster" id="p8">
+  <div class="tag-row"><span class="tag">总结</span><span class="pageno">08 / 08</span></div>
+  <div class="grow" style="flex:0 0 40px"></div>
+  <h1>策略，就是让系统<br>学会<span class="u">因人而异地决策</span></h1>
+  <p class="sub" style="margin-top:30px">策略 PM 做的事：把「如何决策」变成可执行的规则，并用数据持续验证。</p>
+  <div class="card blue" style="margin-top:40px">
+    <div class="ct">🧭 万能公式</div>
+    <p class="body" style="font-weight:700">明确目标 → 识别用户 → 判断场景 → 制定规则 → 数据验证 → 持续优化</p>
+  </div>
+  <div class="grow"></div>
+  <div class="card yellow">
+    <div class="ct">⭐ 面试考点</div>
+    <p class="body">产品设计「<b>用户怎么用</b>」，策略设计「<b>系统怎么判断</b>」。<br>收藏这页，被问到区别直接答。</p>
+  </div>
+  <div class="grow"></div>
+  <div class="footer"><span>产品方法论 Vol.01 · 完</span><span>点赞收藏 🧡 下期：推荐策略</span></div>
+</section>
+
+<script>
+  // 支持 #pN 只显示第 N 页（用于无滚动截图）
+  const m = location.hash.match(/^#p(\d)$/);
+  if (m) {
+    document.querySelectorAll('.poster').forEach(p => {
+      if (p.id !== 'p' + m[1]) p.style.display = 'none';
+    });
+    document.body.style.background = '#fffdf8';
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
