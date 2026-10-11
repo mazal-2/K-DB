@@ -123,6 +123,8 @@ def parse_page(lines, idx, total):
             out.append(parse_table(lines[i:j])); i = j; continue
         if l.startswith('> '):
             out.append(f'<div class="card yellow"><p class="body">{inline(l[2:])}</p></div>'); i += 1; continue
+        if l.strip() == ':::':
+            i += 1; continue
         if l.startswith(':::'):
             cls = 'card blue' if 'blue' in l else 'card'
             j = i + 1; buf = []
@@ -151,13 +153,19 @@ def parse_page(lines, idx, total):
         i += 1
     tag = '封面' if is_cover else '干货'
     return f'''<section class="poster" id="p{idx}">
-  <div class="tag-row"><span class="tag">{TAG} Vol.01</span><span class="pageno">{idx:02d} / {total:02d}</span></div>
+  <div class="tag-row"><span class="tag">{TAG}</span><span class="pageno">{idx:02d} / {total:02d}</span></div>
   {chr(10).join(out)}
   <div class="footer"><span>{FOOTER_L}</span><span>{FOOTER_R}</span></div>
 </section>'''
 
-# ---- 配置区：换成你的品牌信息 ----
+# ---- 配置区：可在 md 首行用 <!-- TAG: x | L: y | R: z --> 覆盖 ----
 TAG, FOOTER_L, FOOTER_R = '产品方法论', '策略产品经理 · 入门', '关注看全系列'
+_m = re.match(r'\s*<!--\s*TAG:\s*(.+?)\s*(?:\|\s*L:\s*(.+?)\s*)?(?:\|\s*R:\s*(.+?)\s*)?-->', MD)
+if _m:
+    TAG = _m.group(1).strip()
+    FOOTER_L = (_m.group(2) or FOOTER_L).strip()
+    FOOTER_R = (_m.group(3) or FOOTER_R).strip()
+    MD = MD[_m.end():]
 
 pages_raw = [p.split('\n') for p in MD.split('\n---\n') if p.strip()]
 total = len(pages_raw)

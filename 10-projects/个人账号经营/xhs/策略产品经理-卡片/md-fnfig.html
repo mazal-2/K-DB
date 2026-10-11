@@ -1,0 +1,180 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>md2card</title><style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e8e6e1; font-family: "PingFang SC", "Microsoft YaHei UI", "Noto Sans SC", sans-serif; }
+  .poster {
+    width: 1080px; height: 1440px;
+    background: #fffdf8;
+    padding: 76px 84px 60px;
+    display: flex; flex-direction: column;
+    color: #2b2b2b;
+    position: relative;
+    overflow: hidden;
+  }
+  .poster + .poster { margin-top: 48px; }
+
+  /* 顶部小标签 */
+  .tag-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+  .tag {
+    display: inline-block; background: #2f5cff; color: #fff;
+    font-size: 24px; font-weight: 600; padding: 8px 20px; border-radius: 8px; letter-spacing: 1px;
+  }
+  .pageno { font-size: 20px; color: #b9b4a8; font-weight: 500; }
+
+  h1 { font-size: 72px; line-height: 1.3; font-weight: 800; margin-bottom: 20px; color: #2f5cff; }
+  h2 { font-size: 56px; line-height: 1.3; font-weight: 800; margin-bottom: 28px; color: #2f5cff; }
+  h1 .u, h2 .u { background: linear-gradient(transparent 62%, #ffe45c 62%); }
+  .sub { font-size: 32px; color: #55503f; line-height: 1.6; margin-bottom: 36px; }
+
+  p.body, li { font-size: 32px; line-height: 1.6; }
+  .body + .body { margin-top: 20px; }
+  mark { background: linear-gradient(transparent 55%, #ffe45c 55%); padding: 0 4px; font-weight: 600; }
+  .hl-blue { color: #2f5cff; font-weight: 700; }
+  .hl-org { color: #ff6b2b; font-weight: 700; }
+
+  .card {
+    background: #fff; border: 2px solid #e7e2d6; border-radius: 16px;
+    padding: 30px 34px; margin-top: 28px;
+  }
+  .card.blue { background: #f0f4ff; border-color: #c9d6ff; }
+  .card.yellow { background: #fff9e3; border-color: #f3e3a6; }
+  .card .ct { font-size: 28px; font-weight: 700; color: #2f5cff; margin-bottom: 12px; letter-spacing: 1px; }
+  .card.yellow .ct { color: #b98a00; }
+
+  ul { list-style: none; margin-top: 24px; }
+  li { padding-left: 44px; position: relative; margin-bottom: 20px; }
+  li::before { content: "✦"; position: absolute; left: 4px; color: #2f5cff; font-size: 26px; top: 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 28px; background: #fff; border-radius: 12px; overflow: hidden; }
+  th { background: #2f5cff; color: #fff; font-size: 28px; padding: 16px 18px; text-align: left; font-weight: 600; }
+  td { font-size: 28px; padding: 14px 18px; border-bottom: 1px solid #eee9dc; line-height: 1.5; }
+  tr:last-child td { border-bottom: 0; }
+  td.k { font-weight: 700; color: #2f5cff; white-space: nowrap; }
+
+  .step { display: flex; align-items: flex-start; gap: 22px; margin-top: 30px; }
+  .step .n {
+    flex: 0 0 56px; height: 56px; border-radius: 50%;
+    background: #2f5cff; color: #fff; font-size: 28px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 4px;
+  }
+  .step .t { font-size: 32px; line-height: 1.55; }
+  .step .t b { font-size: 32px; }
+  .arrow { text-align: center; color: #b9b4a8; font-size: 30px; margin: 6px 0; }
+
+  .footer { margin-top: auto; padding-top: 24px; border-top: 2px dashed #e0dbcd; display: flex; justify-content: space-between; font-size: 20px; color: #b9b4a8; }
+  .grow { flex: 1; }
+  .big-quote { font-size: 40px; line-height: 1.65; font-weight: 700; }
+
+h1 .u, h2 .u { background: linear-gradient(transparent 62%, #ffe45c 62%); }
+code { background:#eef2ff; color:#2f5cff; padding:2px 10px; border-radius:6px; font-size:0.9em; }
+</style></head><body>
+<section class="poster" id="p1">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">01 / 12</span></div>
+  <h1>实习第一天，我画的<mark>功能结构图</mark>被大厂前辈打回了 3 次</h1>
+<p class="body">一篇讲透：是什么、和另外两张图啥区别、四步怎么写、微信拆解案例 👇</p>
+<div class="card blue"><p class="body">功能结构图 = 以<mark>功能模块</mark>为类别，介绍模块下各<mark>功能组成</mark>的图表——只管&quot;有什么功能&quot;，不管长什么样。</p></div>
+<p class="body" style="font-weight:700;color:#2f5cff;margin-top:24px">📖 这一篇你会拿到</p>
+<ul><li>功能/信息/产品<mark>结构图三姐妹</mark>一次分清</li><li>四步写出合格的功能结构图 + <mark>主模块划分秘诀</mark></li><li>微信真实模块<mark>拆解案例</mark> + 末页领完整示例</li>
+</ul>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p2">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">02 / 12</span></div>
+  <h2>为什么<mark>这么重要</mark></h2>
+<p class="body">实习第一天，我兴冲冲把画好的图发给带教老师，回我一句：</p>
+<div class="card yellow"><p class="body">「你这不是结构图，是页面目录。<mark>重写。</mark>」</p></div>
+<p class="body">改到第 3 版才过。后来才懂：需求评审时，<mark>开发第一个看的就是这张图</mark>——</p>
+<ul><li>它决定了开发怎么<mark>评估工作量</mark></li><li>它决定了你的功能设计<mark>有没有漏、有没有重</mark></li><li>它是 PRD 的<mark>骨架</mark>，骨架歪了细节全白写</li>
+</ul>
+<div class="card"><p class="body">功能结构图画得好 = 你真的想清楚了产品。这是<mark>新人最容易露怯、也最容易加分</mark>的一张图。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p3">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">03 / 12</span></div>
+  <h2><mark>它是什么</mark></h2>
+<p class="body">一句话：按照<mark>功能的从属关系</mark>画成的图表，图里每个框都是一个功能模块。</p>
+<ul><li>表达功能之间的<mark>从属关系</mark>：谁包含谁、谁属于谁</li><li>体现产品的<mark>功能模块</mark>与逻辑结构：一个产品由哪几块拼成</li><li><mark>不画字段细节</mark>：只管&quot;有什么功能&quot;，不管&quot;长什么样、存什么数据&quot;</li>
+</ul>
+<div class="card yellow"><p class="body">类比：功能结构图是产品的<mark>骨架 X 光片</mark>——只看骨骼结构，不看皮肤和衣服。画它不需要设计功底，一个树状大纲就够，Xmind / ProcessOn 都能画。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p4">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">04 / 12</span></div>
+  <h2>先分清<mark>三姐妹</mark></h2>
+<p class="body">写 PRD 常见三张图，别再傻傻分不清：</p>
+<table><tr><th>图</th><th>关注什么</th><th>回答什么问题</th></tr><tr><td class="k">功能结构图</td><td>功能的从属关系</td><td>产品<mark>有哪些功能</mark>？</td></tr><tr><td class="k">信息结构图</td><td>数据的分类组合</td><td>产品<mark>有哪些信息</mark>？</td></tr><tr><td class="k">产品结构图</td><td>功能 + 信息放回页面</td><td>每个<mark>页面长啥样</mark>（原型简化版）？</td></tr></table>
+<div class="card blue"><p class="body">功能结构图 → 信息结构图 → 产品结构图。功能框架定了，才谈信息；都齐了才画原型。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p5">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">05 / 12</span></div>
+  <h2>能用来<mark>干嘛</mark></h2>
+<table><tr><th>场景</th><th>具体用法</th></tr><tr><td class="k">🧭 引导方案设计</td><td>模糊的设计要求，用它变清晰；先定骨架再填页面</td></tr><tr><td class="k">🧹 梳理页面功能</td><td>鸟瞰全产品，防止功能点<mark>缺漏</mark></td></tr><tr><td class="k">🔍 产品分析</td><td>竞品功能盘子一图看全</td></tr><tr><td class="k">📦 开发评估</td><td>开发按模块估工作量，吵不起来</td></tr></table>
+<div class="card"><p class="body">新项目立项、接手陌生产品、写竞品分析——<mark>动笔之前先画它</mark>。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p6">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">06 / 12</span></div>
+  <h2><mark>四步写法</mark></h2>
+<div class="step"><div class="n">1</div><div class="t"><mark>梳理业务流程</mark> 🔍 先想清楚用户从头到尾怎么用：浏览 → 加购 → 下单 → 支付</div></div>
+<div class="step"><div class="n">2</div><div class="t"><mark>提炼主功能模块</mark> 🧩 流程里的核心环节 = 候选主模块，画完再走查一遍流程防遗漏</div></div>
+<div class="step"><div class="n">3</div><div class="t"><mark>画层级树</mark> 🌳 主模块 → 子功能 → 功能点，一层层往下拆</div></div>
+<div class="step"><div class="n">4</div><div class="t"><mark>动词+名词命名</mark> ✍️ 写「设置名字」而不是「名字」——传达准确，看图人不困惑</div></div>
+<div class="card yellow"><p class="body">判断标准：每一层<mark>粒度一致</mark>、同一层<mark>不重不漏</mark>（MECE）。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p7">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">07 / 12</span></div>
+  <h2>主模块<mark>怎么定</mark></h2>
+<ul><li><mark>数量 5–9 个为佳</mark>：太多说明拆太碎，太少说明没想清</li><li><mark>Tab ≠ 主模块</mark>：产品被迫塞进 3–4 个 Tab 是妥协；功能复杂时按 Tab 分就太粗糙了</li><li><mark>拆分秘诀</mark> 💡：一个次级功能模块<mark>反复出现在不同 Tab</mark> 里（比如微信的「搜索」），说明它业务上很重要——把它拆出来当主模块，图更简洁</li>
+</ul>
+<div class="card blue"><p class="body">设计新产品：从业务流程提炼主模块；分析已有产品：参考 Tab 起手，再用自己的语言修正。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p8">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">08 / 12</span></div>
+  <h2>颗粒度<mark>怎么定</mark></h2>
+<p class="body">没有标准答案，<mark>由场景决定</mark>：</p>
+<ul><li>设计阶段：从粗到细，<mark>逐步收敛</mark>——先只画模块，设计推进中拆到具体功能操作</li><li>汇报/评审：拆到对方能看懂为止，不追求一次到底</li>
+</ul>
+<table><tr><th>层级</th><th>例子</th></tr><tr><td class="k">产品</td><td>微信</td></tr><tr><td class="k">主模块</td><td>支付</td></tr><tr><td class="k">功能点</td><td>转账</td></tr><tr><td class="k">操作级</td><td>转账给好友 · 转账到银行卡</td></tr></table>
+<div class="card yellow"><p class="body">拆多细看你的汇报对象：给老板看主模块，给开发看操作级。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p9">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">09 / 12</span></div>
+  <h2><mark>踩坑黑名单</mark></h2>
+<div class="step"><div class="n">1</div><div class="t"><mark>画成页面目录</mark> ❌ 按 Tab 页罗列页面 ≠ 按功能拆解</div></div>
+<div class="step"><div class="n">2</div><div class="t"><mark>粒度乱跳</mark> ❌ 上一层是模块，下一层突然写到按钮文案</div></div>
+<div class="step"><div class="n">3</div><div class="t"><mark>重漏交叉</mark> ❌ 「退款」同时挂在订单和支付下面，开发直接来问你</div></div>
+<div class="step"><div class="n">4</div><div class="t"><mark>塞满字段细节</mark> ❌ 结构图不是数据库设计，字段留给 PRD</div></div>
+<div class="step"><div class="n">5</div><div class="t"><mark>名词式命名</mark> ❌ 写「名字」没人懂是看还是改，写「<mark>设置名字</mark>」就清楚了</div></div>
+<div class="card yellow"><p class="body">中枪两条以上的，回去重画——开发一眼就能看出来。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p10">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">10 / 12</span></div>
+  <h2>案例：<mark>微信支付</mark>拆解</h2>
+<table><tr><th>模块</th><th>功能点</th><th>用户动作</th></tr><tr><td class="k">收付款</td><td>收款码 · 付款码 · 赞赏码</td><td>我要收钱 / 我要付钱</td></tr><tr><td class="k">转账</td><td>转账给好友 · 转账到银行卡</td><td>我要把钱给别人</td></tr><tr><td class="k">钱包</td><td>零钱 · 零钱通 · 银行卡</td><td>我要管我的钱</td></tr><tr><td class="k">生活服务</td><td>手机充值 · 生活缴费</td><td>我要交电费话费</td></tr></table>
+<div class="card yellow"><p class="body">注意命名全是<mark>动词+名词</mark>的用户动作视角——「我要收钱」，不是「收款码页面」。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p11">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">11 / 12</span></div>
+  <h2><mark>动手清单</mark></h2>
+<p class="body">画完对照这 7 条：</p>
+<div class="step"><div class="n">1</div><div class="t">✅ 从业务流程出发，不是从页面菜单出发</div></div>
+<div class="step"><div class="n">2</div><div class="t">✅ 主模块 5–9 个，层级 3–4 层</div></div>
+<div class="step"><div class="n">3</div><div class="t">✅ 同层功能<mark>不重不漏</mark>，粒度一致</div></div>
+<div class="step"><div class="n">4</div><div class="t">✅ 命名用<mark>动词+名词</mark>，不用页面名、不用裸名词</div></div>
+<div class="step"><div class="n">5</div><div class="t">✅ 反复出现的次级模块，考虑拆成主模块</div></div>
+<div class="step"><div class="n">6</div><div class="t">✅ 不含字段、样式、交互细节</div></div>
+<div class="step"><div class="n">7</div><div class="t">✅ 拿给开发看一遍，能 30 秒讲明白</div></div>
+<div class="card"><p class="body">把图盖住名字，让别人猜这是什么产品——猜得出来，就画对了。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section><section class="poster" id="p12">
+  <div class="tag-row"><span class="tag">产品方法论 Vol.02</span><span class="pageno">12 / 12</span></div>
+  <h2><mark>总结</mark></h2>
+<p class="body">功能结构图 = <mark>业务流程 → 主模块（5-9 个）→ 功能点</mark> 的三层树，命名一律<mark>动词+名词</mark>。</p>
+<p class="body">它是你产品思维的<mark>第一张可视化答卷</mark>：新人靠它露怯，也靠它加分。</p>
+<div class="card blue"><p class="body">梳理流程 → 提炼主模块 → 画层级 → 动词+名词命名 → 不重不漏</p></div>
+<div class="card"><div class="ct">评论区扣「<mark>111</mark>」，领微信支付模块功能结构图完整示例。</div><p class="body">关注我，下期讲：<mark>功能流程图和功能结构图的区别</mark>。</p></div>
+  <div class="footer"><span>功能结构图 · 实操</span><span>关注看全系列</span></div>
+</section>
+<script>
+const m = location.hash.match(/^#p(\d+)$/);
+if (m) {
+  document.querySelectorAll('.poster').forEach(p => { if (p.id !== 'p' + m[1]) p.style.display = 'none'; });
+  document.body.style.background = '#fffdf8'; window.scrollTo(0, 0);
+}
+</script></body></html>
